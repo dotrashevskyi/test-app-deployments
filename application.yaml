@@ -9,7 +9,6 @@ spec:
   source:
     repoURL: https://github.com/dotrashevskyi/test-app-deployments.git
     chart: app-chart
-    targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
     namespace: default
