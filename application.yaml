@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-argo-application
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    helm:
+      parameters:
+        - name: container.image
+          value: 'us-central1-docker.pkg.dev/internship-166-375809/internship-repo/test-go-app:4.0.0'
+        - name: replicaCount
+          value: 4
+        - name: path.prefix
+          value: main
+    chart: app-chart
+    repoUrl: https://github.com/dotrashevskyi/test-app-deployments.git
+    targetRevision: HEAD
+    path: main
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
