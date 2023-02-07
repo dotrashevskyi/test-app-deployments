@@ -1,0 +1,6 @@
+apiVersion: v2
+name: app-chart-dev
+description: Simple Helm Chart for the GO app dev ver.
+type: application
+version: 0.1.0
+appVersion: "1.16.0"
