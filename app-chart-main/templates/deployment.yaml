@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: {{ .Release.Name }}
-          image: {{ .Values.container.image }}
+          image: {{ .Values.image.name }}:{{ image.tag }}
       imagePullSecrets:
         - name: regcred

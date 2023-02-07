@@ -1,6 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: go-app=us-central1-docker.pkg.dev/internship-166-375809/internship-repo/test-go-app
+    argocd-image-updater.argoproj.io/go-app.update-strategy: latest
+    argocd-image-updater.argoproj.io/go-app.allow-tags: regexp:^[0-9]+.[0-9]+.[0-9]+
+    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
+    argocd-image-updater.argoproj.io/git-branch: main
+    argocd-image-updater.argoproj.io/pull-secret: pullsecret:argocd/artifact-registry-secret
   name: my-go-app-agro-main
   namespace: argocd
 spec:
