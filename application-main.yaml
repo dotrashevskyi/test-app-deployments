@@ -16,7 +16,10 @@ spec:
   source:
     repoURL: https://github.com/dotrashevskyi/test-app-deployments.git
     targetRevision: HEAD
-    path: app-chart-main
+    path: app-chart
+    helm:
+      valueFiles:
+        - values-main.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: default

@@ -16,7 +16,7 @@ spec:
   source:
     repoURL: https://github.com/dotrashevskyi/test-app-deployments.git
     targetRevision: HEAD
-    path: app-chart-dev
+    path: app-chart
     helm:
       valueFiles:
         - values-dev.yaml
