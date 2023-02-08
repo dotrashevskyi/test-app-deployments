@@ -4,5 +4,5 @@ helm:
     value: us-central1-docker.pkg.dev/internship-166-375809/internship-repo/test-go-app
     forcestring: true
   - name: image.tag
-    value: dev-06-02-2023-3daac8b
+    value: dev-08-02-2023-e5be290
     forcestring: true
