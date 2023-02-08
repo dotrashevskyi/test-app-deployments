@@ -19,7 +19,7 @@ spec:
     path: app-chart-dev
     helm:
       valueFiles:
-        -
+        - values-dev.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: default
