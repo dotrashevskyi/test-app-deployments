@@ -1,0 +1,13 @@
+# Default values
+
+image:
+  name: 'us-central1-docker.pkg.dev/internship-166-375809/internship-repo/test-go-app'
+  tag: '3.0.0'
+
+container:
+  image: 'us-central1-docker.pkg.dev/internship-166-375809/internship-repo/test-go-app:4.0.0'
+
+replicaCount: 2
+
+path:
+  prefix: main
